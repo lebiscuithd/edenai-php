@@ -8,6 +8,6 @@ use EdenAI\OCR;
 $text = new Text("API KEY");
 
 # Available providers and languages here: https://api.edenai.run/v1/redoc/#operation/OCR
-$output = $text->OCR(file:'./tests/test.jpg', provider: ['amazon', 'google'], language: "en-US");
+$output = $text->OCR('./tests/test.jpg', ['amazon', 'google'], "en-US");
 echo $output;
 ?>
