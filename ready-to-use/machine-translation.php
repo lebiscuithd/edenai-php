@@ -8,6 +8,6 @@ use EdenAI\Translation;
 $text = new Text("API KEY");
 
 # Available providers and languages here: https://api.edenai.run/v1/redoc/#operation/Automatic%20Translation
-$output = $text->automaticTranslation(text:"Your text", provider: ['amazon', 'google'], source_language: "en-US", target_language: "fr-FR");
+$output = $text->automaticTranslation("Your text", ['amazon', 'google'], "en-US", "fr-FR");
 echo $output;
 ?>
