@@ -8,6 +8,6 @@ use EdenAI\Speech;
 $text = new Text("API KEY");
 
 # Available providers and languages here: https://api.edenai.run/v1/redoc/#operation/Text%20To%20Speech
-$output = $text->textToSpeech(text:"Your text", provider: ['google', 'microsoft'], language: 'en-US', option:"FEMALE");
+$output = $text->textToSpeech("Your text", ['google', 'microsoft'], 'en-US', "FEMALE");
 echo $output;
 ?>
