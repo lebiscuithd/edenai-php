@@ -8,6 +8,6 @@ use EdenAI\Speech;
 $text = new Text("API KEY");
 
 # Available providers and languages here: https://api.edenai.run/v1/redoc/#operation/Speech%20Recognition
-$output = $text->speechRecognition(file:'./tests/test.mp3', provider: ['google', 'microsoft'], language: 'en-US');
+$output = $text->speechRecognition('./tests/test.mp3', ['google', 'microsoft'], 'en-US');
 echo $output;
 ?>
