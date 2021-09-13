@@ -7,6 +7,6 @@ use EdenAI\Text;
 $text = new Text("API KEY");
 
 # Available providers and languages here: https://api.edenai.run/v1/redoc/#operation/Sentiment%20Analysis
-$output = $text->namedEntityRecognition(text:"Your text", provider: ['amazon', 'ibm"], language: "en-US");
+$output = $text->namedEntityRecognition("Your text", ['amazon', 'ibm"], "en-US");
 echo $output;
 ?>
