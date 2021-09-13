@@ -49,7 +49,7 @@ class OCR{
      * @return Response JSON containing results from every provider
      * @throws Exception
      */
-    public function OCRInvoice(String $file,$language = "en-US", $providers = "['amazon']")
+    public function OCRInvoice(String $file, $providers = "['amazon']",$language = "en-US")
     {
         if (empty($providers)) {
             $providers = "[]";
@@ -112,7 +112,7 @@ class OCR{
      * @return Response JSON containing results from every provider
      * @throws Exception
      */
-    public function OCR(String $file, $language="en-US" ,$providers = "['amazon']")
+    public function OCR(String $file ,$providers = "['amazon']", $language="en-US")
     {
         if (empty($providers)) {
             $providers = "[]";

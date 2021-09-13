@@ -50,7 +50,7 @@ class Speech{
      * @return Response JSON containing results from every provider
      * @throws Exception
      */
-    public function speechRecognition(String $file,$language = "en-US", $providers = "['amazon']",$fake_call = false)
+    public function speechRecognition(String $file, $providers = "['amazon']",$language = "en-US",$fake_call = false)
     {
         if (empty($providers)) {
             $providers = "[]";
@@ -112,7 +112,7 @@ class Speech{
      * @return Response JSON containing results from every provider
      * @throws Exception
      */
-    public function textToSpeech(String $text, $language="en-US", $option = "FEMALE" ,$providers = "['amazon']", $fake_call = false)
+    public function textToSpeech(String $text,$providers = "['amazon']", $language="en-US", $option = "FEMALE" , $fake_call = false)
     {
         if (empty($providers)) {
             $providers = "[]";
