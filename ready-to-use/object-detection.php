@@ -8,6 +8,6 @@ use EdenAI\Vision;
 $text = new Text("API KEY");
 
 # Available providers and languages here: https://api.edenai.run/v1/redoc/#operation/Object%20Detection
-$output = $text->objectDetection(file:'./tests/test.jpg', provider: ['amazon', 'google']);
+$output = $text->objectDetection('./tests/test.jpg', ['amazon', 'google']);
 echo $output;
 ?>
