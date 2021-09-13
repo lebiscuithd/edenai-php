@@ -8,6 +8,6 @@ use EdenAI\Vision;
 $text = new Text("API KEY");
 
 # Available providers and languages here: https://api.edenai.run/v1/redoc/#operation/Explicit%20Content%20Detection
-$output = $text->ExplicitContentDetection(file:'./tests/test.jpg', provider: ['amazon', 'google']);
+$output = $text->ExplicitContentDetection('./tests/test.jpg', ['amazon', 'google']);
 echo $output;
 ?>
