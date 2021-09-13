@@ -8,6 +8,6 @@ use EdenAI\OCR;
 $text = new Text("API KEY");
 
 # Available providers and languages here: https://api.edenai.run/v1/redoc/#operation/OCR%20Invoice
-$output = $text->OCRInvoice(file:'./tests/test.jpg', provider: ['microsoft', 'mindee'], language: "en-US");
+$output = $text->OCRInvoice('./tests/test.jpg', ['microsoft', 'mindee'], "en-US");
 echo $output;
 ?>
