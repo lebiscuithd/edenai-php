@@ -8,6 +8,6 @@ use EdenAI\Vision;
 $text = new Text("API KEY");
 
 # Available providers and languages here: https://api.edenai.run/v1/redoc/#operation/Face%20Detection
-$output = $text->faceDetection(file:'./tests/test.jpg', provider: ['amazon', 'google']);
+$output = $text->faceDetection('./tests/test.jpg', ['amazon', 'google']);
 echo $output;
 ?>
