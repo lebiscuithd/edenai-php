@@ -8,6 +8,6 @@ use EdenAI\Text;
 $text = new Text("API KEY");
 
 # Available providers and languages here: https://api.edenai.run/v1/redoc/#operation/Sentiment%20Analysis
-$output = $text->sentimentAnalysis(text:"Your text", provider: ['amazon', 'google'], language:"en-US");
+$output = $text->sentimentAnalysis("Your text", ['amazon', 'google'], "en-US");
 echo $output;
 ?>
