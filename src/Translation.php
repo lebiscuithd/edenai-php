@@ -17,7 +17,7 @@ class Translation{
      * @var  string
      * @internal
      */
-    private $endpoint = "https://api.edenai.run/v1/pretrained/text";
+    private $endpoint = "https://api.edenai.run/v1/pretrained/translation";
 
 
     /**
