@@ -121,7 +121,7 @@ class OCR{
             $providers = json_encode($providers);
         }
         $request = new HTTP_Request2();
-        $request->setUrl("https://api.edenai.run/v1/pretrained/vision/ocr");
+        $request->setUrl("{$this->endpoint}/ocr");
         $request->setMethod(HTTP_Request2::METHOD_POST);
         $request->setConfig(array(
             'follow_redirects' => TRUE
