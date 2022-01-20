@@ -189,5 +189,6 @@ $RECYCLE.BIN/
 
 # keep only relevent docs
 SwaggerClient-php/docs/Model/
+SwaggerClient-php/test/Model/
 
 
