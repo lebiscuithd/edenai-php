@@ -30,7 +30,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
 }
 ```
 
-Then run `composer install --ignore-platform-reqs`
+Then run `composer install`
 
 ### Manual Installation
 
@@ -45,7 +45,7 @@ Download the files and include `autoload.php`:
 To run the unit tests:
 
 ```
-composer install --ignore-platform-reqs
+composer install
 ./vendor/bin/phpunit
 ```
 

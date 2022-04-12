@@ -52,7 +52,7 @@ class SpeechApiTest extends \PHPUnit_Framework_TestCase
     protected $language;
     protected $vocab = null;
     protected $providers;
-    protected $your_api_key='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNWEyY2RmMTktNmI4OC00M2IxLWI2ZGQtOTU5OTA0NmM1ODlhIiwidHlwZSI6InNhbmRib3hfYXBpX3Rva2VuIn0.46SK6NcmCOZ8f70u_dDLV6eEKoF4hHf-W80JenNEwes';
+    protected $your_api_key='';
 
 
     /**
@@ -67,7 +67,6 @@ class SpeechApiTest extends \PHPUnit_Framework_TestCase
      */
     public function setUp()
     {
-        $this->markTestSkipped('must be revisited.');
         // Configure API key authorization: Bearer
         $this->config = Configuration::getDefaultConfiguration()->setApiKey('Authorization', $this->your_api_key);
         // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -128,7 +127,7 @@ class SpeechApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for speechToText
      *
-     * .
+     * getconfidence est parfois null selon certain provider
      *
      */
     public function testSpeechToText()
@@ -145,7 +144,7 @@ class SpeechApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for textToSpeech
      *
-     * probleme 403 bad credidential a cause du type d'encodage
+     * probleme 403 bad credidential a cause du type d'encodage (normalement probleme reglé)
      *
      */
     public function testTextToSpeech()
