@@ -48,7 +48,7 @@ class TextApiTest extends \PHPUnit_Framework_TestCase
     protected $text;
     protected $language;
     protected $providers;
-    protected $your_api_key='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNWEyY2RmMTktNmI4OC00M2IxLWI2ZGQtOTU5OTA0NmM1ODlhIiwidHlwZSI6InNhbmRib3hfYXBpX3Rva2VuIn0.46SK6NcmCOZ8f70u_dDLV6eEKoF4hHf-W80JenNEwes';
+    protected $your_api_key='';
 
     /**
      * Setup before running any test cases

@@ -48,7 +48,7 @@ class OCRApiTest extends \PHPUnit_Framework_TestCase
     protected $files;
     protected $language;
     protected $providers;
-    protected $your_api_key='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNWEyY2RmMTktNmI4OC00M2IxLWI2ZGQtOTU5OTA0NmM1ODlhIiwidHlwZSI6InNhbmRib3hfYXBpX3Rva2VuIn0.46SK6NcmCOZ8f70u_dDLV6eEKoF4hHf-W80JenNEwes';
+    protected $your_api_key='';
 
     /**
      * Setup before running any test cases
@@ -109,26 +109,26 @@ class OCRApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for ocrInvoice
      *
-     * return null dans le result a cause du formatage de ocrInvoice comme pour search
+     * 
      *
      */
     public function testOcrInvoice()
     {
-        // $result = $this->apiInstance->ocrInvoice($this->files, $this->providers, $this->language);
-        // $this->assertNotNull($result);
-        // $this->assertNotNull($result->getResult()[0]['result']);
-        // $this->assertNotNull($result->getResult()[0]['result'][0]->getInvoiceTotal());
-        // $this->assertNotNull($result->getResult()[0]['result'][0]->getSubtotal());
-        // $this->assertNotNull($result->getResult()[0]['result'][0]->getDate());
-        // $this->assertNotNull($result->getResult()[0]['result'][0]->getDueDate());
-        // $this->assertNotNull($result->getResult()[0]['result'][0]->getInvoiceNumber());
-        // $this->assertNotNull($result->getResult()[0]['result'][0]->getTaxes()[0]);
-        // $this->assertNotNull($result->getResult()[0]['result'][0]->getMerchantInformation()->getMerchantName());
-        // $this->assertNotNull($result->getResult()[0]['result'][0]->getMerchantInformation()->getMerchantAddress());
-        // $this->assertNotNull($result->getResult()[0]['result'][0]->getCustomerInformation()->getCustomerName());
-        // $this->assertNotNull($result->getResult()[0]['result'][0]->getCustomerInformation()->getCustomerAddress());
-        // $this->assertNotNull($result->getResult()[0]['result'][0]->getLocale()['currency']);
-        // $this->assertNotNull($result->getResult()[0]['result'][0]->getLocale()['language']);
+        $result = $this->apiInstance->ocrInvoice($this->files, $this->providers, $this->language);
+        $this->assertNotNull($result);
+        $this->assertNotNull($result->getResult()[0]['result']);
+        $this->assertNotNull($result->getResult()[0]['result'][0]->getInvoiceTotal());
+        $this->assertNotNull($result->getResult()[0]['result'][0]->getSubtotal());
+        $this->assertNotNull($result->getResult()[0]['result'][0]->getDate());
+        $this->assertNotNull($result->getResult()[0]['result'][0]->getDueDate());
+        $this->assertNotNull($result->getResult()[0]['result'][0]->getInvoiceNumber());
+        $this->assertNotNull($result->getResult()[0]['result'][0]->getTaxes()[0]);
+        $this->assertNotNull($result->getResult()[0]['result'][0]->getMerchantInformation()->getMerchantName());
+        $this->assertNotNull($result->getResult()[0]['result'][0]->getMerchantInformation()->getMerchantAddress());
+        $this->assertNotNull($result->getResult()[0]['result'][0]->getCustomerInformation()->getCustomerName());
+        $this->assertNotNull($result->getResult()[0]['result'][0]->getCustomerInformation()->getCustomerAddress());
+        $this->assertNotNull($result->getResult()[0]['result'][0]->getLocale()['currency']);
+        $this->assertNotNull($result->getResult()[0]['result'][0]->getLocale()['language']);
 
     }
 }
