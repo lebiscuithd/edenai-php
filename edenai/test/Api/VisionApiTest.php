@@ -46,7 +46,7 @@ class VisionApiTest extends \PHPUnit_Framework_TestCase
     protected $apiInstance;
     protected $files;
     protected $providers;
-    protected $your_api_key='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZjVkYmE3MzMtNzdmOS00MmQ1LTgzZjItYzc0NjliOTk1ZDIxIiwidHlwZSI6ImZyb250X2FwaV90b2tlbiJ9.P5bLIt9dcQ8sHe-1FJgBt2C1eQTsiYjncC1a-caQtn0';
+    protected $your_api_key='';
 
     /**
      * Setup before running any test cases
