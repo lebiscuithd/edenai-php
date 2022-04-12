@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace edenai\Client\Api;
+namespace edenai\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use edenai\Client\ApiException;
-use edenai\Client\Configuration;
-use edenai\Client\HeaderSelector;
-use edenai\Client\ObjectSerializer;
+use edenai\ApiException;
+use edenai\Configuration;
+use edenai\HeaderSelector;
+use edenai\ObjectSerializer;
 
 /**
  * VisionApi Class Doc Comment
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class VisionApi
      * @param  \SplFileObject $files File Image to analyse (ex: pdf, jpg, jpeg, png, tiff) (required)
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;, &#39;google&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \edenai\Client\Model\InlineResponse20011
+     * @return \edenai\Model\InlineResponse20011
      */
     public function explicitContentDetection($files, $providers)
     {
@@ -109,13 +109,13 @@ class VisionApi
      * @param  \SplFileObject $files File Image to analyse (ex: pdf, jpg, jpeg, png, tiff) (required)
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;, &#39;google&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \edenai\Client\Model\InlineResponse20011, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \edenai\Model\InlineResponse20011, HTTP status code, HTTP response headers (array of strings)
      */
     public function explicitContentDetectionWithHttpInfo($files, $providers)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse20011';
+        $returnType = '\edenai\Model\InlineResponse20011';
         $request = $this->explicitContentDetectionRequest($files, $providers);
 
         try {
@@ -167,7 +167,7 @@ class VisionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\edenai\Client\Model\InlineResponse20011',
+                        '\edenai\Model\InlineResponse20011',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -211,7 +211,7 @@ class VisionApi
      */
     public function explicitContentDetectionAsyncWithHttpInfo($files, $providers)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse20011';
+        $returnType = '\edenai\Model\InlineResponse20011';
         $request = $this->explicitContentDetectionRequest($files, $providers);
 
         return $this->client
@@ -379,9 +379,9 @@ class VisionApi
      * @param  \SplFileObject $files File Image to analyse (ex: pdf, jpg, jpeg, png, tiff) (required)
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;,&#39;google&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \edenai\Client\Model\InlineResponse20012
+     * @return \edenai\Model\InlineResponse20012
      */
     public function faceDetection($files, $providers)
     {
@@ -395,13 +395,13 @@ class VisionApi
      * @param  \SplFileObject $files File Image to analyse (ex: pdf, jpg, jpeg, png, tiff) (required)
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;,&#39;google&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \edenai\Client\Model\InlineResponse20012, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \edenai\Model\InlineResponse20012, HTTP status code, HTTP response headers (array of strings)
      */
     public function faceDetectionWithHttpInfo($files, $providers)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse20012';
+        $returnType = '\edenai\Model\InlineResponse20012';
         $request = $this->faceDetectionRequest($files, $providers);
 
         try {
@@ -453,7 +453,7 @@ class VisionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\edenai\Client\Model\InlineResponse20012',
+                        '\edenai\Model\InlineResponse20012',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -497,7 +497,7 @@ class VisionApi
      */
     public function faceDetectionAsyncWithHttpInfo($files, $providers)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse20012';
+        $returnType = '\edenai\Model\InlineResponse20012';
         $request = $this->faceDetectionRequest($files, $providers);
 
         return $this->client
@@ -665,9 +665,9 @@ class VisionApi
      * @param  \SplFileObject $files File Image to analyse (ex: pdf, jpg, jpeg, png, tiff) (required)
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;,&#39;google&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \edenai\Client\Model\InlineResponse20013
+     * @return \edenai\Model\InlineResponse20013
      */
     public function objectDetection($files, $providers)
     {
@@ -681,13 +681,13 @@ class VisionApi
      * @param  \SplFileObject $files File Image to analyse (ex: pdf, jpg, jpeg, png, tiff) (required)
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;,&#39;google&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \edenai\Client\Model\InlineResponse20013, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \edenai\Model\InlineResponse20013, HTTP status code, HTTP response headers (array of strings)
      */
     public function objectDetectionWithHttpInfo($files, $providers)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse20013';
+        $returnType = '\edenai\Model\InlineResponse20013';
         $request = $this->objectDetectionRequest($files, $providers);
 
         try {
@@ -739,7 +739,7 @@ class VisionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\edenai\Client\Model\InlineResponse20013',
+                        '\edenai\Model\InlineResponse20013',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -783,7 +783,7 @@ class VisionApi
      */
     public function objectDetectionAsyncWithHttpInfo($files, $providers)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse20013';
+        $returnType = '\edenai\Model\InlineResponse20013';
         $request = $this->objectDetectionRequest($files, $providers);
 
         return $this->client

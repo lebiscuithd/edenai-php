@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **status** | **string** |  | [optional] 
 **execution_time** | **float** |  | [optional] 
 **original_result** | **object** |  | [optional] 
-**result** | [**\edenai\Client\Model\InlineResponse2009Result**](InlineResponse2009Result.md) |  | [optional] 
+**result** | [**\edenai\Model\InlineResponse2009Result**](InlineResponse2009Result.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

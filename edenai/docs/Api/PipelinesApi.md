@@ -1,6 +1,6 @@
-# edenai\Client\PipelinesApi
+# edenai\PipelinesApi
 
-All URIs are relative to *https://api.edenai.run/v1/*
+All URIs are relative to *https://api.edenai.run/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **pipelines**
-> \edenai\Client\Model\InlineResponse200 pipelines($description, $return_only_last, $text, $files)
+> \edenai\Model\InlineResponse200 pipelines($description, $return_only_last, $text, $files)
 
 
 
@@ -17,14 +17,14 @@ Pipelines let you combine different AI APIs from different providers into a sing
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/vendor/autoload.php');
+require_once(__DIR__ . '/../../vendor/autoload.php');
 
 // Configure API key authorization: Bearer
-$config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = edenai\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new edenai\Client\Api\PipelinesApi(
+$apiInstance = new edenai\Api\PipelinesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\edenai\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\edenai\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 

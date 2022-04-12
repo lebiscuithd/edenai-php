@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace edenai\Client\Model;
+namespace edenai\Model;
 
 use \ArrayAccess;
-use \edenai\Client\ObjectSerializer;
+use \edenai\ObjectSerializer;
 
 /**
  * InlineResponse201 Class Doc Comment
  *
  * @category Class
  * @description speech to text response
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class InlineResponse201 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'result' => '\edenai\Client\Model\InlineResponse201Result1[]'
+        'result' => '\edenai\Model\InlineResponse201Result1[]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class InlineResponse201 implements ModelInterface, ArrayAccess
     /**
      * Gets result
      *
-     * @return \edenai\Client\Model\InlineResponse201Result1[]
+     * @return \edenai\Model\InlineResponse201Result1[]
      */
     public function getResult()
     {
@@ -218,7 +218,7 @@ class InlineResponse201 implements ModelInterface, ArrayAccess
     /**
      * Sets result
      *
-     * @param \edenai\Client\Model\InlineResponse201Result1[] $result result
+     * @param \edenai\Model\InlineResponse201Result1[] $result result
      *
      * @return $this
      */

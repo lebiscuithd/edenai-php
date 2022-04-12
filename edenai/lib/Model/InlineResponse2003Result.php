@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace edenai\Client\Model;
+namespace edenai\Model;
 
 use \ArrayAccess;
-use \edenai\Client\ObjectSerializer;
+use \edenai\ObjectSerializer;
 
 /**
  * InlineResponse2003Result Class Doc Comment
  *
  * @category Class
  * @description object
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class InlineResponse2003Result implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'text' => 'string',
-        'bounding_boxes' => '\edenai\Client\Model\InlineResponse2003ResultBoundingBoxes[]'
+        'bounding_boxes' => '\edenai\Model\InlineResponse2003ResultBoundingBoxes[]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class InlineResponse2003Result implements ModelInterface, ArrayAccess
     /**
      * Gets bounding_boxes
      *
-     * @return \edenai\Client\Model\InlineResponse2003ResultBoundingBoxes[]
+     * @return \edenai\Model\InlineResponse2003ResultBoundingBoxes[]
      */
     public function getBoundingBoxes()
     {
@@ -248,7 +248,7 @@ class InlineResponse2003Result implements ModelInterface, ArrayAccess
     /**
      * Sets bounding_boxes
      *
-     * @param \edenai\Client\Model\InlineResponse2003ResultBoundingBoxes[] $bounding_boxes bounding_boxes
+     * @param \edenai\Model\InlineResponse2003ResultBoundingBoxes[] $bounding_boxes bounding_boxes
      *
      * @return $this
      */

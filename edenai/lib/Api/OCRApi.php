@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace edenai\Client\Api;
+namespace edenai\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use edenai\Client\ApiException;
-use edenai\Client\Configuration;
-use edenai\Client\HeaderSelector;
-use edenai\Client\ObjectSerializer;
+use edenai\ApiException;
+use edenai\Configuration;
+use edenai\HeaderSelector;
+use edenai\ObjectSerializer;
 
 /**
  * OCRApi Class Doc Comment
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class OCRApi
      * @param  string $providers Providers to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;, &#39;ibm&#39;, &#39;google&#39;]) (required)
      * @param  string $language Language code expected (ex: fr-FR) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \edenai\Client\Model\InlineResponse2003
+     * @return \edenai\Model\InlineResponse2003
      */
     public function ocr($files, $providers, $language)
     {
@@ -111,13 +111,13 @@ class OCRApi
      * @param  string $providers Providers to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;, &#39;ibm&#39;, &#39;google&#39;]) (required)
      * @param  string $language Language code expected (ex: fr-FR) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \edenai\Client\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \edenai\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
      */
     public function ocrWithHttpInfo($files, $providers, $language)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse2003';
+        $returnType = '\edenai\Model\InlineResponse2003';
         $request = $this->ocrRequest($files, $providers, $language);
 
         try {
@@ -169,7 +169,7 @@ class OCRApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\edenai\Client\Model\InlineResponse2003',
+                        '\edenai\Model\InlineResponse2003',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -215,7 +215,7 @@ class OCRApi
      */
     public function ocrAsyncWithHttpInfo($files, $providers, $language)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse2003';
+        $returnType = '\edenai\Model\InlineResponse2003';
         $request = $this->ocrRequest($files, $providers, $language);
 
         return $this->client
@@ -399,9 +399,9 @@ class OCRApi
      * @param  string $providers Provider to compare (ex: [ &#39;mindee&#39;, &#39;microsoft&#39;]) (required)
      * @param  string $language Language code of invoice (ex: fr-FR (French), en-US (English), es-ES (Spanish)) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \edenai\Client\Model\InlineResponse2004
+     * @return \edenai\Model\InlineResponse2004
      */
     public function ocrInvoice($files, $providers, $language)
     {
@@ -416,13 +416,13 @@ class OCRApi
      * @param  string $providers Provider to compare (ex: [ &#39;mindee&#39;, &#39;microsoft&#39;]) (required)
      * @param  string $language Language code of invoice (ex: fr-FR (French), en-US (English), es-ES (Spanish)) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \edenai\Client\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \edenai\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
      */
     public function ocrInvoiceWithHttpInfo($files, $providers, $language)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse2004';
+        $returnType = '\edenai\Model\InlineResponse2004';
         $request = $this->ocrInvoiceRequest($files, $providers, $language);
 
         try {
@@ -474,7 +474,7 @@ class OCRApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\edenai\Client\Model\InlineResponse2004',
+                        '\edenai\Model\InlineResponse2004',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -520,7 +520,7 @@ class OCRApi
      */
     public function ocrInvoiceAsyncWithHttpInfo($files, $providers, $language)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse2004';
+        $returnType = '\edenai\Model\InlineResponse2004';
         $request = $this->ocrInvoiceRequest($files, $providers, $language);
 
         return $this->client

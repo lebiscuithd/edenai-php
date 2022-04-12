@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Swagger\Client;
+namespace edenai;
 
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\ObjectSerializer;
+use \edenai\Configuration;
+use \edenai\ApiException;
+use \edenai\ObjectSerializer;
 
 /**
  * PipelinesApiTest Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -96,7 +96,7 @@ class PipelinesApiTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Test case for pipelines
-     *
+     *  des erreurs quand on ajoute plusieurs feature, erreur 400 avec text qui est vide alors qu'il ne l'est pas, a voir pourquoi ses erreurs
      * .
      *
      */

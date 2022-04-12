@@ -1,6 +1,6 @@
-# edenai\Client\OCRApi
+# edenai\OCRApi
 
-All URIs are relative to *https://api.edenai.run/v1/*
+All URIs are relative to *https://api.edenai.run/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **ocr**
-> \edenai\Client\Model\InlineResponse2003 ocr($files, $providers, $language)
+> \edenai\Model\InlineResponse2003 ocr($files, $providers, $language)
 
 
 
@@ -18,14 +18,14 @@ Optical Character Recognition or optical character reader (OCR) is the electroni
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/vendor/autoload.php');
+require_once(__DIR__ . '/../../vendor/autoload.php');
 
 // Configure API key authorization: Bearer
-$config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = edenai\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new edenai\Client\Api\OCRApi(
+$apiInstance = new edenai\Api\OCRApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\edenai\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
+[**\edenai\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **ocrInvoice**
-> \edenai\Client\Model\InlineResponse2004 ocrInvoice($files, $providers, $language)
+> \edenai\Model\InlineResponse2004 ocrInvoice($files, $providers, $language)
 
 
 
@@ -77,14 +77,14 @@ The OCR Invoice API enables customers to take invoices in a variety of formats a
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/vendor/autoload.php');
+require_once(__DIR__ . '/../../vendor/autoload.php');
 
 // Configure API key authorization: Bearer
-$config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = edenai\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new edenai\Client\Api\OCRApi(
+$apiInstance = new edenai\Api\OCRApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\edenai\Client\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\edenai\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
 
 ### Authorization
 

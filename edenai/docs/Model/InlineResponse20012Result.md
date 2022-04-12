@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **x_maxs** | **float[]** |  | [optional] 
 **y_mins** | **float[]** |  | [optional] 
 **y_maxs** | **float[]** |  | [optional] 
-**landmarks** | [**\edenai\Client\Model\InlineResponse20012ResultLandmarks**](InlineResponse20012ResultLandmarks.md) |  | [optional] 
+**landmarks** | [**\edenai\Model\InlineResponse20012ResultLandmarks**](InlineResponse20012ResultLandmarks.md) |  | [optional] 
 **emotions** | **object** |  | [optional] 
 **poses** | **object** |  | [optional] 
 

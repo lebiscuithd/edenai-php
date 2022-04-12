@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,14 +27,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace edenai\Client;
+namespace edenai;
 
 /**
  * InlineResponse200Test Class Doc Comment
  *
  * @category    Class
  * @description InlineResponse200
- * @package     edenai\Client
+ * @package     edenai
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

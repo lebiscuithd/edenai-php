@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace edenai\Client\Api;
+namespace edenai\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use edenai\Client\ApiException;
-use edenai\Client\Configuration;
-use edenai\Client\HeaderSelector;
-use edenai\Client\ObjectSerializer;
+use edenai\ApiException;
+use edenai\Configuration;
+use edenai\HeaderSelector;
+use edenai\ObjectSerializer;
 
 /**
  * PipelinesApi Class Doc Comment
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -95,9 +95,9 @@ class PipelinesApi
      * @param  string $text The input text for the first feature of the pipeline (optional)
      * @param  \SplFileObject $files The input file for the first feature of the pipeline (optional)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \edenai\Client\Model\InlineResponse200
+     * @return \edenai\Model\InlineResponse200
      */
     public function pipelines($description, $return_only_last, $text = null, $files = null)
     {
@@ -113,13 +113,13 @@ class PipelinesApi
      * @param  string $text The input text for the first feature of the pipeline (optional)
      * @param  \SplFileObject $files The input file for the first feature of the pipeline (optional)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \edenai\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \edenai\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
     public function pipelinesWithHttpInfo($description, $return_only_last, $text = null, $files = null)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse200';
+        $returnType = '\edenai\Model\InlineResponse200';
         $request = $this->pipelinesRequest($description, $return_only_last, $text, $files);
 
         try {
@@ -171,7 +171,7 @@ class PipelinesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\edenai\Client\Model\InlineResponse200',
+                        '\edenai\Model\InlineResponse200',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -219,7 +219,7 @@ class PipelinesApi
      */
     public function pipelinesAsyncWithHttpInfo($description, $return_only_last, $text = null, $files = null)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse200';
+        $returnType = '\edenai\Model\InlineResponse200';
         $request = $this->pipelinesRequest($description, $return_only_last, $text, $files);
 
         return $this->client

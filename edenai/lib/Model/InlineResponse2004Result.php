@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace edenai\Client\Model;
+namespace edenai\Model;
 
 use \ArrayAccess;
-use \edenai\Client\ObjectSerializer;
+use \edenai\ObjectSerializer;
 
 /**
  * InlineResponse2004Result Class Doc Comment
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,8 +57,16 @@ class InlineResponse2004Result implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'text' => 'string',
-        'results' => '\edenai\Client\Model\InlineResponse2004Results[]'
+        'customer_information' => '\edenai\Model\InlineResponse2004CustomerInformation',
+        'merchant_information' => '\edenai\Model\InlineResponse2004MerchantInformation',
+        'invoice_total' => 'float',
+        'subtotal' => 'float',
+        'date' => 'string',
+        'due_date' => 'string',
+        'invoice_number' => 'string',
+        'taxes' => 'object',
+        'locale' => '\edenai\Model\InlineResponse2004Locale',
+        'item_lines' => '\edenai\Model\InlineResponse2004ItemLines[]'
     ];
 
     /**
@@ -67,8 +75,16 @@ class InlineResponse2004Result implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'text' => null,
-        'results' => null
+        'customer_information' => null,
+        'merchant_information' => null,
+        'invoice_total' => null,
+        'subtotal' => null,
+        'date' => null,
+        'due_date' => null,
+        'invoice_number' => null,
+        'taxes' => null,
+        'locale' => null,
+        'item_lines' => null
     ];
 
     /**
@@ -98,8 +114,16 @@ class InlineResponse2004Result implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'text' => 'text',
-        'results' => 'results'
+        'customer_information' => 'customer_information',
+        'merchant_information' => 'merchant_information',
+        'invoice_total' => 'invoice_total',
+        'subtotal' => 'subtotal',
+        'date' => 'date',
+        'due_date' => 'due_date',
+        'invoice_number' => 'invoice_number',
+        'taxes' => 'taxes',
+        'locale' => 'locale',
+        'item_lines' => 'item_lines'
     ];
 
     /**
@@ -108,8 +132,16 @@ class InlineResponse2004Result implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'text' => 'setText',
-        'results' => 'setResults'
+        'customer_information' => 'setCustomerInformation',
+        'merchant_information' => 'setMerchantInformation',
+        'invoice_total' => 'setInvoiceTotal',
+        'subtotal' => 'setSubtotal',
+        'date' => 'setDate',
+        'due_date' => 'setDueDate',
+        'invoice_number' => 'setInvoiceNumber',
+        'taxes' => 'setTaxes',
+        'locale' => 'setLocale',
+        'item_lines' => 'setItemLines'
     ];
 
     /**
@@ -118,8 +150,16 @@ class InlineResponse2004Result implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'text' => 'getText',
-        'results' => 'getResults'
+        'customer_information' => 'getCustomerInformation',
+        'merchant_information' => 'getMerchantInformation',
+        'invoice_total' => 'getInvoiceTotal',
+        'subtotal' => 'getSubtotal',
+        'date' => 'getDate',
+        'due_date' => 'getDueDate',
+        'invoice_number' => 'getInvoiceNumber',
+        'taxes' => 'getTaxes',
+        'locale' => 'getLocale',
+        'item_lines' => 'getItemLines'
     ];
 
     /**
@@ -182,8 +222,16 @@ class InlineResponse2004Result implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['text'] = isset($data['text']) ? $data['text'] : null;
-        $this->container['results'] = isset($data['results']) ? $data['results'] : null;
+        $this->container['customer_information'] = isset($data['customer_information']) ? $data['customer_information'] : null;
+        $this->container['merchant_information'] = isset($data['merchant_information']) ? $data['merchant_information'] : null;
+        $this->container['invoice_total'] = isset($data['invoice_total']) ? $data['invoice_total'] : null;
+        $this->container['subtotal'] = isset($data['subtotal']) ? $data['subtotal'] : null;
+        $this->container['date'] = isset($data['date']) ? $data['date'] : null;
+        $this->container['due_date'] = isset($data['due_date']) ? $data['due_date'] : null;
+        $this->container['invoice_number'] = isset($data['invoice_number']) ? $data['invoice_number'] : null;
+        $this->container['taxes'] = isset($data['taxes']) ? $data['taxes'] : null;
+        $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
+        $this->container['item_lines'] = isset($data['item_lines']) ? $data['item_lines'] : null;
     }
 
     /**
@@ -211,49 +259,241 @@ class InlineResponse2004Result implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets text
+     * Gets customer_information
      *
-     * @return string
+     * @return \edenai\Model\InlineResponse2004CustomerInformation
      */
-    public function getText()
+    public function getCustomerInformation()
     {
-        return $this->container['text'];
+        return $this->container['customer_information'];
     }
 
     /**
-     * Sets text
+     * Sets customer_information
      *
-     * @param string $text text
+     * @param \edenai\Model\InlineResponse2004CustomerInformation $customer_information customer_information
      *
      * @return $this
      */
-    public function setText($text)
+    public function setCustomerInformation($customer_information)
     {
-        $this->container['text'] = $text;
+        $this->container['customer_information'] = $customer_information;
 
         return $this;
     }
 
     /**
-     * Gets results
+     * Gets merchant_information
      *
-     * @return \edenai\Client\Model\InlineResponse2004Results[]
+     * @return \edenai\Model\InlineResponse2004MerchantInformation
      */
-    public function getResults()
+    public function getMerchantInformation()
     {
-        return $this->container['results'];
+        return $this->container['merchant_information'];
     }
 
     /**
-     * Sets results
+     * Sets merchant_information
      *
-     * @param \edenai\Client\Model\InlineResponse2004Results[] $results results
+     * @param \edenai\Model\InlineResponse2004MerchantInformation $merchant_information merchant_information
      *
      * @return $this
      */
-    public function setResults($results)
+    public function setMerchantInformation($merchant_information)
     {
-        $this->container['results'] = $results;
+        $this->container['merchant_information'] = $merchant_information;
+
+        return $this;
+    }
+
+    /**
+     * Gets invoice_total
+     *
+     * @return float
+     */
+    public function getInvoiceTotal()
+    {
+        return $this->container['invoice_total'];
+    }
+
+    /**
+     * Sets invoice_total
+     *
+     * @param float $invoice_total invoice_total
+     *
+     * @return $this
+     */
+    public function setInvoiceTotal($invoice_total)
+    {
+        $this->container['invoice_total'] = $invoice_total;
+
+        return $this;
+    }
+
+    /**
+     * Gets subtotal
+     *
+     * @return float
+     */
+    public function getSubtotal()
+    {
+        return $this->container['subtotal'];
+    }
+
+    /**
+     * Sets subtotal
+     *
+     * @param float $subtotal subtotal
+     *
+     * @return $this
+     */
+    public function setSubtotal($subtotal)
+    {
+        $this->container['subtotal'] = $subtotal;
+
+        return $this;
+    }
+
+    /**
+     * Gets date
+     *
+     * @return string
+     */
+    public function getDate()
+    {
+        return $this->container['date'];
+    }
+
+    /**
+     * Sets date
+     *
+     * @param string $date date
+     *
+     * @return $this
+     */
+    public function setDate($date)
+    {
+        $this->container['date'] = $date;
+
+        return $this;
+    }
+
+    /**
+     * Gets due_date
+     *
+     * @return string
+     */
+    public function getDueDate()
+    {
+        return $this->container['due_date'];
+    }
+
+    /**
+     * Sets due_date
+     *
+     * @param string $due_date due_date
+     *
+     * @return $this
+     */
+    public function setDueDate($due_date)
+    {
+        $this->container['due_date'] = $due_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets invoice_number
+     *
+     * @return string
+     */
+    public function getInvoiceNumber()
+    {
+        return $this->container['invoice_number'];
+    }
+
+    /**
+     * Sets invoice_number
+     *
+     * @param string $invoice_number invoice_number
+     *
+     * @return $this
+     */
+    public function setInvoiceNumber($invoice_number)
+    {
+        $this->container['invoice_number'] = $invoice_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets taxes
+     *
+     * @return object
+     */
+    public function getTaxes()
+    {
+        return $this->container['taxes'];
+    }
+
+    /**
+     * Sets taxes
+     *
+     * @param object $taxes taxes
+     *
+     * @return $this
+     */
+    public function setTaxes($taxes)
+    {
+        $this->container['taxes'] = $taxes;
+
+        return $this;
+    }
+
+    /**
+     * Gets locale
+     *
+     * @return \edenai\Model\InlineResponse2004Locale
+     */
+    public function getLocale()
+    {
+        return $this->container['locale'];
+    }
+
+    /**
+     * Sets locale
+     *
+     * @param \edenai\Model\InlineResponse2004Locale $locale locale
+     *
+     * @return $this
+     */
+    public function setLocale($locale)
+    {
+        $this->container['locale'] = $locale;
+
+        return $this;
+    }
+
+    /**
+     * Gets item_lines
+     *
+     * @return \edenai\Model\InlineResponse2004ItemLines[]
+     */
+    public function getItemLines()
+    {
+        return $this->container['item_lines'];
+    }
+
+    /**
+     * Sets item_lines
+     *
+     * @param \edenai\Model\InlineResponse2004ItemLines[] $item_lines item_lines
+     *
+     * @return $this
+     */
+    public function setItemLines($item_lines)
+    {
+        $this->container['item_lines'] = $item_lines;
 
         return $this;
     }

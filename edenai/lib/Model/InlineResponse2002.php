@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace edenai\Client\Model;
+namespace edenai\Model;
 
 use \ArrayAccess;
-use \edenai\Client\ObjectSerializer;
+use \edenai\ObjectSerializer;
 
 /**
  * InlineResponse2002 Class Doc Comment
  *
  * @category Class
  * @description object
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
         'job_id' => 'string',
         'status' => 'string',
         'audio_name' => 'string',
-        'results' => '\edenai\Client\Model\InlineResponse2002Results[]'
+        'results' => '\edenai\Model\InlineResponse2002Results[]'
     ];
 
     /**
@@ -298,7 +298,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
     /**
      * Gets results
      *
-     * @return \edenai\Client\Model\InlineResponse2002Results[]
+     * @return \edenai\Model\InlineResponse2002Results[]
      */
     public function getResults()
     {
@@ -308,7 +308,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
     /**
      * Sets results
      *
-     * @param \edenai\Client\Model\InlineResponse2002Results[] $results results
+     * @param \edenai\Model\InlineResponse2002Results[] $results results
      *
      * @return $this
      */

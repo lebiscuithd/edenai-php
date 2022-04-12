@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace edenai\Client\Model;
+namespace edenai\Model;
 
 use \ArrayAccess;
-use \edenai\Client\ObjectSerializer;
+use \edenai\ObjectSerializer;
 
 /**
  * InlineResponse2005Result1 Class Doc Comment
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,7 +62,7 @@ class InlineResponse2005Result1 implements ModelInterface, ArrayAccess
         'status' => 'string',
         'execution_time' => 'float',
         'original_result' => 'object',
-        'result' => '\edenai\Client\Model\InlineResponse2005Result'
+        'result' => '\edenai\Model\InlineResponse2005Result'
     ];
 
     /**
@@ -357,7 +357,7 @@ class InlineResponse2005Result1 implements ModelInterface, ArrayAccess
     /**
      * Gets result
      *
-     * @return \edenai\Client\Model\InlineResponse2005Result
+     * @return \edenai\Model\InlineResponse2005Result
      */
     public function getResult()
     {
@@ -367,7 +367,7 @@ class InlineResponse2005Result1 implements ModelInterface, ArrayAccess
     /**
      * Sets result
      *
-     * @param \edenai\Client\Model\InlineResponse2005Result $result result
+     * @param \edenai\Model\InlineResponse2005Result $result result
      *
      * @return $this
      */

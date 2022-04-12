@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace edenai\Client\Model;
+namespace edenai\Model;
 
 use \ArrayAccess;
-use \edenai\Client\ObjectSerializer;
+use \edenai\ObjectSerializer;
 
 /**
  * InlineResponse2003Result1 Class Doc Comment
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,11 +58,12 @@ class InlineResponse2003Result1 implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'solution_name' => 'string',
+        'number_of_pages' => 'float',
         'provider' => 'string',
         'status' => 'string',
         'execution_time' => 'float',
         'original_result' => 'object',
-        'result' => '\edenai\Client\Model\InlineResponse2003Result'
+        'result' => '\edenai\Model\InlineResponse2003Result'
     ];
 
     /**
@@ -72,6 +73,7 @@ class InlineResponse2003Result1 implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'solution_name' => null,
+        'number_of_pages' => null,
         'provider' => null,
         'status' => null,
         'execution_time' => null,
@@ -107,6 +109,7 @@ class InlineResponse2003Result1 implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'solution_name' => 'solution_name',
+        'number_of_pages' => 'number_of_pages',
         'provider' => 'provider',
         'status' => 'status',
         'execution_time' => 'execution_time',
@@ -121,6 +124,7 @@ class InlineResponse2003Result1 implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'solution_name' => 'setSolutionName',
+        'number_of_pages' => 'setNumberOfPages',
         'provider' => 'setProvider',
         'status' => 'setStatus',
         'execution_time' => 'setExecutionTime',
@@ -135,6 +139,7 @@ class InlineResponse2003Result1 implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'solution_name' => 'getSolutionName',
+        'number_of_pages' => 'getNumberOfPages',
         'provider' => 'getProvider',
         'status' => 'getStatus',
         'execution_time' => 'getExecutionTime',
@@ -203,6 +208,7 @@ class InlineResponse2003Result1 implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['solution_name'] = isset($data['solution_name']) ? $data['solution_name'] : null;
+        $this->container['number_of_pages'] = isset($data['number_of_pages']) ? $data['number_of_pages'] : null;
         $this->container['provider'] = isset($data['provider']) ? $data['provider'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['execution_time'] = isset($data['execution_time']) ? $data['execution_time'] : null;
@@ -254,6 +260,30 @@ class InlineResponse2003Result1 implements ModelInterface, ArrayAccess
     public function setSolutionName($solution_name)
     {
         $this->container['solution_name'] = $solution_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets number_of_pages
+     *
+     * @return float
+     */
+    public function getNumberOfPages()
+    {
+        return $this->container['number_of_pages'];
+    }
+
+    /**
+     * Sets number_of_pages
+     *
+     * @param float $number_of_pages number_of_pages
+     *
+     * @return $this
+     */
+    public function setNumberOfPages($number_of_pages)
+    {
+        $this->container['number_of_pages'] = $number_of_pages;
 
         return $this;
     }
@@ -357,7 +387,7 @@ class InlineResponse2003Result1 implements ModelInterface, ArrayAccess
     /**
      * Gets result
      *
-     * @return \edenai\Client\Model\InlineResponse2003Result
+     * @return \edenai\Model\InlineResponse2003Result
      */
     public function getResult()
     {
@@ -367,7 +397,7 @@ class InlineResponse2003Result1 implements ModelInterface, ArrayAccess
     /**
      * Sets result
      *
-     * @param \edenai\Client\Model\InlineResponse2003Result $result result
+     * @param \edenai\Model\InlineResponse2003Result $result result
      *
      * @return $this
      */

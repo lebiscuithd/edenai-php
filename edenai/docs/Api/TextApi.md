@@ -1,6 +1,6 @@
-# edenai\Client\TextApi
+# edenai\TextApi
 
-All URIs are relative to *https://api.edenai.run/v1/*
+All URIs are relative to *https://api.edenai.run/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **keywordExtraction**
-> \edenai\Client\Model\InlineResponse2005 keywordExtraction($language, $text, $providers)
+> \edenai\Model\InlineResponse2005 keywordExtraction($language, $text, $providers)
 
 
 
@@ -20,14 +20,14 @@ Keyword extraction (also known as keyword detection or keyword analysis) is a te
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/vendor/autoload.php');
+require_once(__DIR__ . '/../../vendor/autoload.php');
 
 // Configure API key authorization: Bearer
-$config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = edenai\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new edenai\Client\Api\TextApi(
+$apiInstance = new edenai\Api\TextApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\edenai\Client\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+[**\edenai\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **namedEntityRecognition**
-> \edenai\Client\Model\InlineResponse2006 namedEntityRecognition($language, $text, $providers)
+> \edenai\Model\InlineResponse2006 namedEntityRecognition($language, $text, $providers)
 
 
 
@@ -79,14 +79,14 @@ Named Entity Recognition (also called entity identification or entity extraction
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/vendor/autoload.php');
+require_once(__DIR__ . '/../../vendor/autoload.php');
 
 // Configure API key authorization: Bearer
-$config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = edenai\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new edenai\Client\Api\TextApi(
+$apiInstance = new edenai\Api\TextApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\edenai\Client\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
+[**\edenai\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
 
 ### Authorization
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **sentimentAnalysis**
-> \edenai\Client\Model\InlineResponse2007 sentimentAnalysis($language, $text, $providers)
+> \edenai\Model\InlineResponse2007 sentimentAnalysis($language, $text, $providers)
 
 
 
@@ -138,14 +138,14 @@ Sentiment analysis API extracts sentiment in a given string of text.Sentiment an
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/vendor/autoload.php');
+require_once(__DIR__ . '/../../vendor/autoload.php');
 
 // Configure API key authorization: Bearer
-$config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = edenai\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new edenai\Client\Api\TextApi(
+$apiInstance = new edenai\Api\TextApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\edenai\Client\Model\InlineResponse2007**](../Model/InlineResponse2007.md)
+[**\edenai\Model\InlineResponse2007**](../Model/InlineResponse2007.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **syntaxAnalysis**
-> \edenai\Client\Model\InlineResponse2008 syntaxAnalysis($language, $text, $providers)
+> \edenai\Model\InlineResponse2008 syntaxAnalysis($language, $text, $providers)
 
 
 
@@ -197,14 +197,14 @@ Syntax analysis consists principaly in highlighting the structure of a text.  **
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/vendor/autoload.php');
+require_once(__DIR__ . '/../../vendor/autoload.php');
 
 // Configure API key authorization: Bearer
-$config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = edenai\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new edenai\Client\Api\TextApi(
+$apiInstance = new edenai\Api\TextApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\edenai\Client\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\edenai\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
 
 ### Authorization
 

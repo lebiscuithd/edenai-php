@@ -4,6 +4,6 @@
 	"gitUserId": "edenai",
 	"gitRepoBaseURL": "https://github.com/edenai/edenai-php/",
 	"artifactVersion": "1.1.4",
-	"invoker-package": "edenai"
+	"invokerPackage": "edenai",
+	"packagePath":"edenai"
 }
-

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace edenai\Client\Api;
+namespace edenai\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use edenai\Client\ApiException;
-use edenai\Client\Configuration;
-use edenai\Client\HeaderSelector;
-use edenai\Client\ObjectSerializer;
+use edenai\ApiException;
+use edenai\Configuration;
+use edenai\HeaderSelector;
+use edenai\ObjectSerializer;
 
 /**
  * SpeechApi Class Doc Comment
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -97,9 +97,9 @@ class SpeechApi
      * @param  string $users_webhook_parameters Json data that consist of additional parameters that will be sent back to the webhook receiver (ex: api key for security).                    **NOTE : The data will be returned back as a string that should be decoded into a json object!** (optional)
      * @param  string $vocab Speechmatics allows to add a custom vocab dictionnary (json format) for better recognition, you can add it via this parameter.                     It has to be a list of dictionaries : {&#39;content&#39;(Required) : &#39;string&#39;, &#39;sounds_like&#39;(Optional) : &#39;list of strings&#39;} (optional)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \edenai\Client\Model\InlineResponse2001
+     * @return \edenai\Model\InlineResponse2001
      */
     public function asyncSpeechToText($language, $files, $providers, $webhook_receiver = null, $users_webhook_parameters = null, $vocab = null)
     {
@@ -117,13 +117,13 @@ class SpeechApi
      * @param  string $users_webhook_parameters Json data that consist of additional parameters that will be sent back to the webhook receiver (ex: api key for security).                    **NOTE : The data will be returned back as a string that should be decoded into a json object!** (optional)
      * @param  string $vocab Speechmatics allows to add a custom vocab dictionnary (json format) for better recognition, you can add it via this parameter.                     It has to be a list of dictionaries : {&#39;content&#39;(Required) : &#39;string&#39;, &#39;sounds_like&#39;(Optional) : &#39;list of strings&#39;} (optional)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \edenai\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \edenai\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
     public function asyncSpeechToTextWithHttpInfo($language, $files, $providers, $webhook_receiver = null, $users_webhook_parameters = null, $vocab = null)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse2001';
+        $returnType = '\edenai\Model\InlineResponse2001';
         $request = $this->asyncSpeechToTextRequest($language, $files, $providers, $webhook_receiver, $users_webhook_parameters, $vocab);
 
         try {
@@ -175,7 +175,7 @@ class SpeechApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\edenai\Client\Model\InlineResponse2001',
+                        '\edenai\Model\InlineResponse2001',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -227,7 +227,7 @@ class SpeechApi
      */
     public function asyncSpeechToTextAsyncWithHttpInfo($language, $files, $providers, $webhook_receiver = null, $users_webhook_parameters = null, $vocab = null)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse2001';
+        $returnType = '\edenai\Model\InlineResponse2001';
         $request = $this->asyncSpeechToTextRequest($language, $files, $providers, $webhook_receiver, $users_webhook_parameters, $vocab);
 
         return $this->client
@@ -439,9 +439,9 @@ class SpeechApi
      *
      * @param  string $job_id job_id (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \edenai\Client\Model\InlineResponse2002
+     * @return \edenai\Model\InlineResponse2002
      */
     public function asyncSpeechToText_0($job_id)
     {
@@ -454,13 +454,13 @@ class SpeechApi
      *
      * @param  string $job_id (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \edenai\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \edenai\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
     public function asyncSpeechToText_0WithHttpInfo($job_id)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse2002';
+        $returnType = '\edenai\Model\InlineResponse2002';
         $request = $this->asyncSpeechToText_0Request($job_id);
 
         try {
@@ -512,7 +512,7 @@ class SpeechApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\edenai\Client\Model\InlineResponse2002',
+                        '\edenai\Model\InlineResponse2002',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -554,7 +554,7 @@ class SpeechApi
      */
     public function asyncSpeechToText_0AsyncWithHttpInfo($job_id)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse2002';
+        $returnType = '\edenai\Model\InlineResponse2002';
         $request = $this->asyncSpeechToText_0Request($job_id);
 
         return $this->client
@@ -712,9 +712,9 @@ class SpeechApi
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;, &#39;ibm&#39;,&#39;google&#39;, &#39;threescribe]) (required)
      * @param  string $vocab Speechmatics allows to add a custom vocab dictionnary (json format) for better recognition, you can add it via this parameter.                     It has to be a list of dictionaries : {&#39;content&#39;(Required) : &#39;string&#39;, &#39;sounds_like&#39;(Optional) : &#39;list of strings&#39;} (optional)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \edenai\Client\Model\InlineResponse201
+     * @return \edenai\Model\InlineResponse201
      */
     public function speechToText($language, $files, $providers, $vocab = null)
     {
@@ -730,13 +730,13 @@ class SpeechApi
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;, &#39;ibm&#39;,&#39;google&#39;, &#39;threescribe]) (required)
      * @param  string $vocab Speechmatics allows to add a custom vocab dictionnary (json format) for better recognition, you can add it via this parameter.                     It has to be a list of dictionaries : {&#39;content&#39;(Required) : &#39;string&#39;, &#39;sounds_like&#39;(Optional) : &#39;list of strings&#39;} (optional)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \edenai\Client\Model\InlineResponse201, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \edenai\Model\InlineResponse201, HTTP status code, HTTP response headers (array of strings)
      */
     public function speechToTextWithHttpInfo($language, $files, $providers, $vocab = null)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse201';
+        $returnType = '\edenai\Model\InlineResponse201';
         $request = $this->speechToTextRequest($language, $files, $providers, $vocab);
 
         try {
@@ -788,7 +788,7 @@ class SpeechApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\edenai\Client\Model\InlineResponse201',
+                        '\edenai\Model\InlineResponse201',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -836,7 +836,7 @@ class SpeechApi
      */
     public function speechToTextAsyncWithHttpInfo($language, $files, $providers, $vocab = null)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse201';
+        $returnType = '\edenai\Model\InlineResponse201';
         $request = $this->speechToTextRequest($language, $files, $providers, $vocab);
 
         return $this->client
@@ -1033,9 +1033,9 @@ class SpeechApi
      * @param  string $option Voice gender selected (ex: FEMALE ou MALE) (required)
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;, &#39;ibm&#39;,&#39;google&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \edenai\Client\Model\InlineResponse2011
+     * @return \edenai\Model\InlineResponse2011
      */
     public function textToSpeech($text, $language, $option, $providers)
     {
@@ -1051,13 +1051,13 @@ class SpeechApi
      * @param  string $option Voice gender selected (ex: FEMALE ou MALE) (required)
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;, &#39;ibm&#39;,&#39;google&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \edenai\Client\Model\InlineResponse2011, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \edenai\Model\InlineResponse2011, HTTP status code, HTTP response headers (array of strings)
      */
     public function textToSpeechWithHttpInfo($text, $language, $option, $providers)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse2011';
+        $returnType = '\edenai\Model\InlineResponse2011';
         $request = $this->textToSpeechRequest($text, $language, $option, $providers);
 
         try {
@@ -1109,7 +1109,7 @@ class SpeechApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\edenai\Client\Model\InlineResponse2011',
+                        '\edenai\Model\InlineResponse2011',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1157,7 +1157,7 @@ class SpeechApi
      */
     public function textToSpeechAsyncWithHttpInfo($text, $language, $option, $providers)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse2011';
+        $returnType = '\edenai\Model\InlineResponse2011';
         $request = $this->textToSpeechRequest($text, $language, $option, $providers);
 
         return $this->client

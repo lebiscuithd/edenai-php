@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace edenai\Client\Api;
+namespace edenai\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use edenai\Client\ApiException;
-use edenai\Client\Configuration;
-use edenai\Client\HeaderSelector;
-use edenai\Client\ObjectSerializer;
+use edenai\ApiException;
+use edenai\Configuration;
+use edenai\HeaderSelector;
+use edenai\ObjectSerializer;
 
 /**
  * TextApi Class Doc Comment
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class TextApi
      * @param  string $text Text to analyze (required)
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;, &#39;ibm&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \edenai\Client\Model\InlineResponse2005
+     * @return \edenai\Model\InlineResponse2005
      */
     public function keywordExtraction($language, $text, $providers)
     {
@@ -111,13 +111,13 @@ class TextApi
      * @param  string $text Text to analyze (required)
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;, &#39;ibm&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \edenai\Client\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \edenai\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
      */
     public function keywordExtractionWithHttpInfo($language, $text, $providers)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse2005';
+        $returnType = '\edenai\Model\InlineResponse2005';
         $request = $this->keywordExtractionRequest($language, $text, $providers);
 
         try {
@@ -169,7 +169,7 @@ class TextApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\edenai\Client\Model\InlineResponse2005',
+                        '\edenai\Model\InlineResponse2005',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -215,7 +215,7 @@ class TextApi
      */
     public function keywordExtractionAsyncWithHttpInfo($language, $text, $providers)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse2005';
+        $returnType = '\edenai\Model\InlineResponse2005';
         $request = $this->keywordExtractionRequest($language, $text, $providers);
 
         return $this->client
@@ -402,9 +402,9 @@ class TextApi
      * @param  string $text Text to analyze (required)
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;, &#39;ibm&#39;,&#39;google&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \edenai\Client\Model\InlineResponse2006
+     * @return \edenai\Model\InlineResponse2006
      */
     public function namedEntityRecognition($language, $text, $providers)
     {
@@ -419,13 +419,13 @@ class TextApi
      * @param  string $text Text to analyze (required)
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;, &#39;ibm&#39;,&#39;google&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \edenai\Client\Model\InlineResponse2006, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \edenai\Model\InlineResponse2006, HTTP status code, HTTP response headers (array of strings)
      */
     public function namedEntityRecognitionWithHttpInfo($language, $text, $providers)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse2006';
+        $returnType = '\edenai\Model\InlineResponse2006';
         $request = $this->namedEntityRecognitionRequest($language, $text, $providers);
 
         try {
@@ -477,7 +477,7 @@ class TextApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\edenai\Client\Model\InlineResponse2006',
+                        '\edenai\Model\InlineResponse2006',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -523,7 +523,7 @@ class TextApi
      */
     public function namedEntityRecognitionAsyncWithHttpInfo($language, $text, $providers)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse2006';
+        $returnType = '\edenai\Model\InlineResponse2006';
         $request = $this->namedEntityRecognitionRequest($language, $text, $providers);
 
         return $this->client
@@ -710,9 +710,9 @@ class TextApi
      * @param  string $text Text to analyze (required)
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;, &#39;ibm&#39;, &#39;google&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \edenai\Client\Model\InlineResponse2007
+     * @return \edenai\Model\InlineResponse2007
      */
     public function sentimentAnalysis($language, $text, $providers)
     {
@@ -727,13 +727,13 @@ class TextApi
      * @param  string $text Text to analyze (required)
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;, &#39;ibm&#39;, &#39;google&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \edenai\Client\Model\InlineResponse2007, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \edenai\Model\InlineResponse2007, HTTP status code, HTTP response headers (array of strings)
      */
     public function sentimentAnalysisWithHttpInfo($language, $text, $providers)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse2007';
+        $returnType = '\edenai\Model\InlineResponse2007';
         $request = $this->sentimentAnalysisRequest($language, $text, $providers);
 
         try {
@@ -785,7 +785,7 @@ class TextApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\edenai\Client\Model\InlineResponse2007',
+                        '\edenai\Model\InlineResponse2007',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -831,7 +831,7 @@ class TextApi
      */
     public function sentimentAnalysisAsyncWithHttpInfo($language, $text, $providers)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse2007';
+        $returnType = '\edenai\Model\InlineResponse2007';
         $request = $this->sentimentAnalysisRequest($language, $text, $providers);
 
         return $this->client
@@ -1018,9 +1018,9 @@ class TextApi
      * @param  string $text Text to analyze (required)
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;, &#39;ibm&#39;,&#39;google&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \edenai\Client\Model\InlineResponse2008
+     * @return \edenai\Model\InlineResponse2008
      */
     public function syntaxAnalysis($language, $text, $providers)
     {
@@ -1035,13 +1035,13 @@ class TextApi
      * @param  string $text Text to analyze (required)
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;, &#39;ibm&#39;,&#39;google&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \edenai\Client\Model\InlineResponse2008, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \edenai\Model\InlineResponse2008, HTTP status code, HTTP response headers (array of strings)
      */
     public function syntaxAnalysisWithHttpInfo($language, $text, $providers)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse2008';
+        $returnType = '\edenai\Model\InlineResponse2008';
         $request = $this->syntaxAnalysisRequest($language, $text, $providers);
 
         try {
@@ -1093,7 +1093,7 @@ class TextApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\edenai\Client\Model\InlineResponse2008',
+                        '\edenai\Model\InlineResponse2008',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1139,7 +1139,7 @@ class TextApi
      */
     public function syntaxAnalysisAsyncWithHttpInfo($language, $text, $providers)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse2008';
+        $returnType = '\edenai\Model\InlineResponse2008';
         $request = $this->syntaxAnalysisRequest($language, $text, $providers);
 
         return $this->client

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Swagger\Client;
+namespace edenai;
 
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\ObjectSerializer;
+use \edenai\Configuration;
+use \edenai\ApiException;
+use \edenai\ObjectSerializer;
 
 /**
  * OCRApiTest Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -109,7 +109,7 @@ class OCRApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Test case for ocrInvoice
      *
-     * .
+     * return null dans le result a cause du formatage de ocrInvoice comme pour search
      *
      */
     public function testOcrInvoice()

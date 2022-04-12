@@ -1,6 +1,6 @@
-# edenai\Client\EdenAIToolsApi
+# edenai\EdenAIToolsApi
 
-All URIs are relative to *https://api.edenai.run/v1/*
+All URIs are relative to *https://api.edenai.run/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **search**
-> \edenai\Client\Model\InlineResponse20014 search($text, $words)
+> \edenai\Model\InlineResponse20014 search($text, $words)
 
 
 
@@ -17,14 +17,14 @@ This is an easy tool to lookup for a list of words in a given text
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/vendor/autoload.php');
+require_once(__DIR__ . '/../../vendor/autoload.php');
 
 // Configure API key authorization: Bearer
-$config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = edenai\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new edenai\Client\Api\EdenAIToolsApi(
+$apiInstance = new edenai\Api\EdenAIToolsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\edenai\Client\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
+[**\edenai\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
 
 ### Authorization
 

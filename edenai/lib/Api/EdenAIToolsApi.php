@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace edenai\Client\Api;
+namespace edenai\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use edenai\Client\ApiException;
-use edenai\Client\Configuration;
-use edenai\Client\HeaderSelector;
-use edenai\Client\ObjectSerializer;
+use edenai\ApiException;
+use edenai\Configuration;
+use edenai\HeaderSelector;
+use edenai\ObjectSerializer;
 
 /**
  * EdenAIToolsApi Class Doc Comment
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class EdenAIToolsApi
      * @param  string $text Text to analyze (required)
      * @param  string $words (ex: [ &#39;Happy&#39;, &#39;New&#39;, &#39;Year&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \edenai\Client\Model\InlineResponse20014
+     * @return \edenai\Model\InlineResponse20014
      */
     public function search($text, $words)
     {
@@ -109,13 +109,13 @@ class EdenAIToolsApi
      * @param  string $text Text to analyze (required)
      * @param  string $words (ex: [ &#39;Happy&#39;, &#39;New&#39;, &#39;Year&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \edenai\Client\Model\InlineResponse20014, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \edenai\Model\InlineResponse20014, HTTP status code, HTTP response headers (array of strings)
      */
     public function searchWithHttpInfo($text, $words)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse20014';
+        $returnType = '\edenai\Model\InlineResponse20014';
         $request = $this->searchRequest($text, $words);
 
         try {
@@ -167,7 +167,7 @@ class EdenAIToolsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\edenai\Client\Model\InlineResponse20014',
+                        '\edenai\Model\InlineResponse20014',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -211,7 +211,7 @@ class EdenAIToolsApi
      */
     public function searchAsyncWithHttpInfo($text, $words)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse20014';
+        $returnType = '\edenai\Model\InlineResponse20014';
         $request = $this->searchRequest($text, $words);
 
         return $this->client

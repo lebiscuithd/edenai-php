@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace edenai\Client\Api;
+namespace edenai\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use edenai\Client\ApiException;
-use edenai\Client\Configuration;
-use edenai\Client\HeaderSelector;
-use edenai\Client\ObjectSerializer;
+use edenai\ApiException;
+use edenai\Configuration;
+use edenai\HeaderSelector;
+use edenai\ObjectSerializer;
 
 /**
  * TranslationApi Class Doc Comment
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -95,9 +95,9 @@ class TranslationApi
      * @param  string $target_language Language code of text (ex: fr (French), en (English), es (Spanish)) (required)
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;, &#39;ibm&#39;, &#39;google&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \edenai\Client\Model\InlineResponse2009
+     * @return \edenai\Model\InlineResponse2009
      */
     public function automaticTranslation($text, $source_language, $target_language, $providers)
     {
@@ -113,13 +113,13 @@ class TranslationApi
      * @param  string $target_language Language code of text (ex: fr (French), en (English), es (Spanish)) (required)
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;, &#39;ibm&#39;, &#39;google&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \edenai\Client\Model\InlineResponse2009, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \edenai\Model\InlineResponse2009, HTTP status code, HTTP response headers (array of strings)
      */
     public function automaticTranslationWithHttpInfo($text, $source_language, $target_language, $providers)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse2009';
+        $returnType = '\edenai\Model\InlineResponse2009';
         $request = $this->automaticTranslationRequest($text, $source_language, $target_language, $providers);
 
         try {
@@ -171,7 +171,7 @@ class TranslationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\edenai\Client\Model\InlineResponse2009',
+                        '\edenai\Model\InlineResponse2009',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -219,7 +219,7 @@ class TranslationApi
      */
     public function automaticTranslationAsyncWithHttpInfo($text, $source_language, $target_language, $providers)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse2009';
+        $returnType = '\edenai\Model\InlineResponse2009';
         $request = $this->automaticTranslationRequest($text, $source_language, $target_language, $providers);
 
         return $this->client
@@ -420,9 +420,9 @@ class TranslationApi
      * @param  string $text Text to analyze (required)
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;, &#39;ibm&#39;,&#39;google&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \edenai\Client\Model\InlineResponse20010
+     * @return \edenai\Model\InlineResponse20010
      */
     public function languageDetection($text, $providers)
     {
@@ -436,13 +436,13 @@ class TranslationApi
      * @param  string $text Text to analyze (required)
      * @param  string $providers Provider to compare (ex: [ &#39;amazon&#39;, &#39;microsoft&#39;, &#39;ibm&#39;,&#39;google&#39;]) (required)
      *
-     * @throws \edenai\Client\ApiException on non-2xx response
+     * @throws \edenai\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \edenai\Client\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \edenai\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
      */
     public function languageDetectionWithHttpInfo($text, $providers)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse20010';
+        $returnType = '\edenai\Model\InlineResponse20010';
         $request = $this->languageDetectionRequest($text, $providers);
 
         try {
@@ -494,7 +494,7 @@ class TranslationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\edenai\Client\Model\InlineResponse20010',
+                        '\edenai\Model\InlineResponse20010',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -538,7 +538,7 @@ class TranslationApi
      */
     public function languageDetectionAsyncWithHttpInfo($text, $providers)
     {
-        $returnType = '\edenai\Client\Model\InlineResponse20010';
+        $returnType = '\edenai\Model\InlineResponse20010';
         $request = $this->languageDetectionRequest($text, $providers);
 
         return $this->client

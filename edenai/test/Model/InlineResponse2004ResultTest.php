@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,14 +27,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace edenai\Client;
+namespace edenai;
 
 /**
  * InlineResponse2004ResultTest Class Doc Comment
  *
  * @category    Class
  * @description InlineResponse2004Result
- * @package     edenai\Client
+ * @package     edenai
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -77,16 +77,72 @@ class InlineResponse2004ResultTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "text"
+     * Test attribute "customer_information"
      */
-    public function testPropertyText()
+    public function testPropertyCustomerInformation()
     {
     }
 
     /**
-     * Test attribute "results"
+     * Test attribute "merchant_information"
      */
-    public function testPropertyResults()
+    public function testPropertyMerchantInformation()
+    {
+    }
+
+    /**
+     * Test attribute "invoice_total"
+     */
+    public function testPropertyInvoiceTotal()
+    {
+    }
+
+    /**
+     * Test attribute "subtotal"
+     */
+    public function testPropertySubtotal()
+    {
+    }
+
+    /**
+     * Test attribute "date"
+     */
+    public function testPropertyDate()
+    {
+    }
+
+    /**
+     * Test attribute "due_date"
+     */
+    public function testPropertyDueDate()
+    {
+    }
+
+    /**
+     * Test attribute "invoice_number"
+     */
+    public function testPropertyInvoiceNumber()
+    {
+    }
+
+    /**
+     * Test attribute "taxes"
+     */
+    public function testPropertyTaxes()
+    {
+    }
+
+    /**
+     * Test attribute "locale"
+     */
+    public function testPropertyLocale()
+    {
+    }
+
+    /**
+     * Test attribute "item_lines"
+     */
+    public function testPropertyItemLines()
     {
     }
 }

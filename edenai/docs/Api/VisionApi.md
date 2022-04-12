@@ -1,6 +1,6 @@
-# edenai\Client\VisionApi
+# edenai\VisionApi
 
-All URIs are relative to *https://api.edenai.run/v1/*
+All URIs are relative to *https://api.edenai.run/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **explicitContentDetection**
-> \edenai\Client\Model\InlineResponse20011 explicitContentDetection($files, $providers)
+> \edenai\Model\InlineResponse20011 explicitContentDetection($files, $providers)
 
 
 
@@ -19,14 +19,14 @@ Explicit Content Detection detects adult only content in videos, who is generall
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/vendor/autoload.php');
+require_once(__DIR__ . '/../../vendor/autoload.php');
 
 // Configure API key authorization: Bearer
-$config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = edenai\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new edenai\Client\Api\VisionApi(
+$apiInstance = new edenai\Api\VisionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\edenai\Client\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
+[**\edenai\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **faceDetection**
-> \edenai\Client\Model\InlineResponse20012 faceDetection($files, $providers)
+> \edenai\Model\InlineResponse20012 faceDetection($files, $providers)
 
 
 
@@ -76,14 +76,14 @@ Face Detection is a computer technology being used in a variety of applicationst
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/vendor/autoload.php');
+require_once(__DIR__ . '/../../vendor/autoload.php');
 
 // Configure API key authorization: Bearer
-$config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = edenai\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new edenai\Client\Api\VisionApi(
+$apiInstance = new edenai\Api\VisionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\edenai\Client\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
+[**\edenai\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
 
 ### Authorization
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **objectDetection**
-> \edenai\Client\Model\InlineResponse20013 objectDetection($files, $providers)
+> \edenai\Model\InlineResponse20013 objectDetection($files, $providers)
 
 
 
@@ -133,14 +133,14 @@ Object Detection is a computer vision technique that allows us to identify and l
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/vendor/autoload.php');
+require_once(__DIR__ . '/../../vendor/autoload.php');
 
 // Configure API key authorization: Bearer
-$config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = edenai\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = edenai\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new edenai\Client\Api\VisionApi(
+$apiInstance = new edenai\Api\VisionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\edenai\Client\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
+[**\edenai\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
 
 ### Authorization
 

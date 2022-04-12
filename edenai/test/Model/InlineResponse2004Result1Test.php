@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,14 +27,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace edenai\Client;
+namespace edenai;
 
 /**
  * InlineResponse2004Result1Test Class Doc Comment
  *
  * @category    Class
  * @description InlineResponse2004Result1
- * @package     edenai\Client
+ * @package     edenai
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -80,6 +80,13 @@ class InlineResponse2004Result1Test extends \PHPUnit_Framework_TestCase
      * Test attribute "solution_name"
      */
     public function testPropertySolutionName()
+    {
+    }
+
+    /**
+     * Test attribute "number_of_pages"
+     */
+    public function testPropertyNumberOfPages()
     {
     }
 

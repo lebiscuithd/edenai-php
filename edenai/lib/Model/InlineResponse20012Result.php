@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace edenai\Client\Model;
+namespace edenai\Model;
 
 use \ArrayAccess;
-use \edenai\Client\ObjectSerializer;
+use \edenai\ObjectSerializer;
 
 /**
  * InlineResponse20012Result Class Doc Comment
  *
  * @category Class
  * @description object
- * @package  edenai\Client
+ * @package  edenai
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -65,7 +65,7 @@ class InlineResponse20012Result implements ModelInterface, ArrayAccess
         'x_maxs' => 'float[]',
         'y_mins' => 'float[]',
         'y_maxs' => 'float[]',
-        'landmarks' => '\edenai\Client\Model\InlineResponse20012ResultLandmarks',
+        'landmarks' => '\edenai\Model\InlineResponse20012ResultLandmarks',
         'emotions' => 'object',
         'poses' => 'object'
     ];
@@ -430,7 +430,7 @@ class InlineResponse20012Result implements ModelInterface, ArrayAccess
     /**
      * Gets landmarks
      *
-     * @return \edenai\Client\Model\InlineResponse20012ResultLandmarks
+     * @return \edenai\Model\InlineResponse20012ResultLandmarks
      */
     public function getLandmarks()
     {
@@ -440,7 +440,7 @@ class InlineResponse20012Result implements ModelInterface, ArrayAccess
     /**
      * Sets landmarks
      *
-     * @param \edenai\Client\Model\InlineResponse20012ResultLandmarks $landmarks landmarks
+     * @param \edenai\Model\InlineResponse20012ResultLandmarks $landmarks landmarks
      *
      * @return $this
      */
