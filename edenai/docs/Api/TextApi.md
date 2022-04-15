@@ -20,7 +20,7 @@ Keyword extraction (also known as keyword detection or keyword analysis) is a te
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/../../vendor/autoload.php');
+require_once(__DIR__ . '/your_path_to_vendor/vendor/autoload.php');
 
 // Configure API key authorization: Bearer
 $config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
@@ -79,7 +79,7 @@ Named Entity Recognition (also called entity identification or entity extraction
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/../../vendor/autoload.php');
+require_once(__DIR__ . '/your_path_to_vendor/vendor/autoload.php');
 
 // Configure API key authorization: Bearer
 $config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
@@ -138,7 +138,7 @@ Sentiment analysis API extracts sentiment in a given string of text.Sentiment an
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/../../vendor/autoload.php');
+require_once(__DIR__ . '/your_path_to_vendor/vendor/autoload.php');
 
 // Configure API key authorization: Bearer
 $config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
@@ -197,7 +197,7 @@ Syntax analysis consists principaly in highlighting the structure of a text.  **
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/../../vendor/autoload.php');
+require_once(__DIR__ . '/your_path_to_vendor/vendor/autoload.php');
 
 // Configure API key authorization: Bearer
 $config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
