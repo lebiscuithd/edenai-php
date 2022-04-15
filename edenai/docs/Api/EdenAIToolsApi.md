@@ -17,7 +17,7 @@ This is an easy tool to lookup for a list of words in a given text
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/../../vendor/autoload.php');
+require_once(__DIR__ . '/your_path_to_vendor/vendor/autoload.php');
 
 // Configure API key authorization: Bearer
 $config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');

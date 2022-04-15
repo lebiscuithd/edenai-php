@@ -20,7 +20,7 @@ Speech recognition is technology that can recognize spoken words, which can then
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/../../vendor/autoload.php');
+require_once(__DIR__ . '/your_path_to_vendor/vendor/autoload.php');
 
 // Configure API key authorization: Bearer
 $config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
@@ -85,7 +85,7 @@ This endpoint allows you to check the state of  your asynchronous speech recogni
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/../../vendor/autoload.php');
+require_once(__DIR__ . '/your_path_to_vendor/vendor/autoload.php');
 
 // Configure API key authorization: Bearer
 $config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
@@ -140,7 +140,7 @@ Speech recognition is technology that can recognize spoken words, which can then
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/../../vendor/autoload.php');
+require_once(__DIR__ . '/your_path_to_vendor/vendor/autoload.php');
 
 // Configure API key authorization: Bearer
 $config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
@@ -201,7 +201,7 @@ Text-to-speech (TTS) system converts normal language text into speech.  **SUPPOR
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/../../vendor/autoload.php');
+require_once(__DIR__ . '/your_path_to_vendor/vendor/autoload.php');
 
 // Configure API key authorization: Bearer
 $config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');

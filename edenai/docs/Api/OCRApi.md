@@ -18,7 +18,7 @@ Optical Character Recognition or optical character reader (OCR) is the electroni
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/../../vendor/autoload.php');
+require_once(__DIR__ . '/your_path_to_vendor/vendor/autoload.php');
 
 // Configure API key authorization: Bearer
 $config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
@@ -77,7 +77,7 @@ The OCR Invoice API enables customers to take invoices in a variety of formats a
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/../../vendor/autoload.php');
+require_once(__DIR__ . '/your_path_to_vendor/vendor/autoload.php');
 
 // Configure API key authorization: Bearer
 $config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');

@@ -18,7 +18,7 @@ Machine translation refers to the translation of a text into another language us
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/../../vendor/autoload.php');
+require_once(__DIR__ . '/your_path_to_vendor/vendor/autoload.php');
 
 // Configure API key authorization: Bearer
 $config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
@@ -79,7 +79,7 @@ Language Detection or language guessing is the algorithm of determining which na
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/../../vendor/autoload.php');
+require_once(__DIR__ . '/your_path_to_vendor/vendor/autoload.php');
 
 // Configure API key authorization: Bearer
 $config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
