@@ -32,6 +32,10 @@ use \edenai\Configuration;
 use \edenai\ApiException;
 use \edenai\ObjectSerializer;
 
+require 'vendor/autoload.php';
+use \Dotenv\Dotenv;
+
+
 /**
  * VisionApiTest Class Doc Comment
  *
@@ -60,11 +64,17 @@ class VisionApiTest extends \PHPUnit_Framework_TestCase
      */
     public function setUp()
     {
+
+        $dotenv = Dotenv::createImmutable(__DIR__);
+        $dotenv->load();
+        $this->your_api_key=$_ENV['API_KEY'];
+
+
         // Configure API key authorization: Bearer
         $this->config = Configuration::getDefaultConfiguration()->setApiKey('Authorization', $this->your_api_key);
         // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
         $this->config = Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-        $this->files = "/home/michel/Desktop/meuble.png"; // \SplFileObject | File Image to analyse (ex: pdf, jpg, jpeg, png, tiff)
+        $this->files = __DIR__ . "/data/image.jpg"; // \SplFileObject | File Image to analyse (ex: pdf, jpg, jpeg, png, tiff)
         $this->providers = "['google']"; // string | Provider to compare (ex: [ 'amazon', 'microsoft', 'google'])
         $this->apiInstance = new Api\VisionApi(
             // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.

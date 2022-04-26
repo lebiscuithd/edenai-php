@@ -191,4 +191,7 @@ $RECYCLE.BIN/
 SwaggerClient-php/docs/Model/
 SwaggerClient-php/test/Model/
 
+.env
+edenai/vendor
+composer.lock
 

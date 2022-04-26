@@ -32,6 +32,10 @@ use \edenai\Configuration;
 use \edenai\ApiException;
 use \edenai\ObjectSerializer;
 
+require 'vendor/autoload.php';
+use \Dotenv\Dotenv;
+
+
 /**
  * SpeechApiTest Class Doc Comment
  *
@@ -67,6 +71,12 @@ class SpeechApiTest extends \PHPUnit_Framework_TestCase
      */
     public function setUp()
     {
+
+        $dotenv = Dotenv::createImmutable(__DIR__);
+        $dotenv->load();
+        $this->your_api_key=$_ENV['API_KEY'];
+
+
         // Configure API key authorization: Bearer
         $this->config = Configuration::getDefaultConfiguration()->setApiKey('Authorization', $this->your_api_key);
         // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -74,7 +84,7 @@ class SpeechApiTest extends \PHPUnit_Framework_TestCase
         $this->text = "ceci est un texte"; // string | Text to translate
         $this->providers = "['amazon']"; // string | Provider to compare (ex: [ 'amazon', 'microsoft', 'google'])
         $this->language = "fr-FR";
-        $this->files = "/home/michel/Downloads/ttsMP3.com_VoiceText_2022-3-22_10_44_57.mp3";
+        $this->files = __DIR__ . "/data/audio.mp3"; // \SplFileObject | File Image to analyse (ex: pdf, jpg, jpeg, png, tiff)
         $this->option = "MALE";
         $this->apiInstance = new Api\SpeechApi(
             // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.

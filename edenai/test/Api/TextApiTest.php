@@ -32,6 +32,10 @@ use \edenai\Configuration;
 use \edenai\ApiException;
 use \edenai\ObjectSerializer;
 
+require 'vendor/autoload.php';
+use \Dotenv\Dotenv;
+
+
 /**
  * TextApiTest Class Doc Comment
  *
@@ -43,13 +47,13 @@ use \edenai\ObjectSerializer;
 class TextApiTest extends \PHPUnit_Framework_TestCase
 {
 
+
     protected $config;
     protected $apiInstance;
     protected $text;
     protected $language;
     protected $providers;
-    protected $your_api_key='';
-
+    protected $your_api_key;
     /**
      * Setup before running any test cases
      */
@@ -62,6 +66,11 @@ class TextApiTest extends \PHPUnit_Framework_TestCase
      */
     public function setUp()
     {
+
+        $dotenv = Dotenv::createImmutable(__DIR__);
+        $dotenv->load();
+        $this->your_api_key=$_ENV['API_KEY'];
+
         // Configure API key authorization: Bearer
         $this->config = Configuration::getDefaultConfiguration()->setApiKey('Authorization', $this->your_api_key);
         // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
