@@ -4,7 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **solution_name** | **string** |  | [optional] 
-**number_of_pages** | **float** |  | [optional] 
 **provider** | **string** |  | [optional] 
 **status** | **string** |  | [optional] 
 **execution_time** | **float** |  | [optional] 

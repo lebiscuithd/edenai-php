@@ -10,16 +10,16 @@ Method | HTTP request | Description
 
 
 # **explicitContentDetection**
-> \edenai\Model\InlineResponse20011 explicitContentDetection($files, $providers)
+> \edenai\Model\InlineResponse20014 explicitContentDetection($files, $providers)
 
 
 
-Explicit Content Detection detects adult only content in videos, who is generally inappropriate for people under the age of 18 and includes nudity, sexual activity and pornography ...  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------| |**Microsoft Azure**|`microsoft`| `v3.2`  |**Amazon Web Services**|`amazon`| `boto3 (v1.15.18)`  |**Google Cloud**|`google`| `v1`
+Explicit Content Detection detects adult only content in videos, who is generally inappropriate for people under the age of 18 and includes nudity, sexual activity and pornography ...  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------|
 
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/your_path_to_vendor/vendor/autoload.php');
+require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: Bearer
 $config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\edenai\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
+[**\edenai\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
 
 ### Authorization
 
@@ -67,16 +67,16 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **faceDetection**
-> \edenai\Model\InlineResponse20012 faceDetection($files, $providers)
+> \edenai\Model\InlineResponse20015 faceDetection($files, $providers)
 
 
 
-Face Detection is a computer technology being used in a variety of applicationsthat identifies human faces in digital images.  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------| |**Google Cloud**|`google`| `v1`
+Face Detection is a computer technology being used in a variety of applicationsthat identifies human faces in digital images.  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------|
 
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/your_path_to_vendor/vendor/autoload.php');
+require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: Bearer
 $config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\edenai\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
+[**\edenai\Model\InlineResponse20015**](../Model/InlineResponse20015.md)
 
 ### Authorization
 
@@ -124,16 +124,16 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **objectDetection**
-> \edenai\Model\InlineResponse20013 objectDetection($files, $providers)
+> \edenai\Model\InlineResponse20016 objectDetection($files, $providers)
 
 
 
-Object Detection is a computer vision technique that allows us to identify and locate objects in an image or video  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------| |**Microsoft Azure**|`microsoft`| `v3.2`  |**Amazon Web Services**|`amazon`| `boto3 (v1.15.18)`  |**Google Cloud**|`google`| `v1`
+Object Detection is a computer vision technique that allows us to identify and locate objects in an image or video  **AVAILABLE PROVIDERS**   |Name|Value|Version| |----|-----|-------|
 
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/your_path_to_vendor/vendor/autoload.php');
+require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: Bearer
 $config = edenai\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\edenai\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
+[**\edenai\Model\InlineResponse20016**](../Model/InlineResponse20016.md)
 
 ### Authorization
 
